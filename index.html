@@ -1,0 +1,61 @@
+<html>  
+<head>  
+      <title> Fryalog Login</title>  
+    <link rel = "stylesheet" type = "text/css" href = "style.css">   
+</head>  
+<body>  
+
+  <h>
+    <div id = "frm">  
+        <h> Fryalog Login </h> 
+        <form name="f1" action = "authentication.php" onsubmit = "return validation()" method = "POST">  
+            <p> 
+                <label> UserID: </label>  
+                <input type = "text" id ="UserID" name  = "UserID" />  
+            </p>  
+            <p>  
+               
+                <label> Password: </label>  
+                <input type = "Password" id ="pass" name  = "pass" 
+               />   
+  <p>  
+               
+                <label> Email: </label>  
+                <input type = "Email" id ="Email" name  = "Email" 
+               />   
+
+              
+            </p>  
+            <p>     
+                <input type =  "submit" id = "btn" value = "Sign In" />  <table style="width:100%">
+            </p>  
+        </form>  
+    </div>  
+    <script>  
+            function validation()  
+            {  
+                var id=document.f1.UserID.value;  
+                var ps=document.f1.pass.value;  
+                if(id.length=="" && ps.length=="") {  
+                    alert("Put your UserID and Password)");  
+                    return false;  
+                }  
+                else  
+                {  
+                    if(id.length=="") {  
+                        alert("Please Enter your UserID");  
+                        return false;  
+                    }   
+                    if (ps.length=="") {  
+                    alert(" Please enter your Password");  
+                    return false;  
+                    if (Email.length=="") {  
+                    alert(" Please enter your Email");  
+                    return false;  
+                    }  
+                }                             
+            }  
+        </script>  
+</body>     
+</html>  
+
